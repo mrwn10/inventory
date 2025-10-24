@@ -1,0 +1,738 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Styles */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f8fff9 0%, #e8f5e8 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Combined Header Section */
+.header-section {
+    margin-bottom: 30px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(46, 139, 87, 0.1);
+    animation: fadeInUp 0.6s ease;
+}
+
+.title-section {
+    flex: 1;
+}
+
+.main-title {
+    color: #2E8B57;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Stats Section */
+.stats-section {
+    display: flex;
+    align-items: center;
+}
+
+.count-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%);
+    color: white;
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(46, 139, 87, 0.3);
+    min-width: 200px;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-active {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-inactive {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.count-icon {
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+.count-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.count-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.count-number {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+/* Table Container */
+.records-table-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(46, 139, 87, 0.1);
+    padding: 30px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.table-header h3 {
+    color: #2E8B57;
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Table Styles */
+.table {
+    margin-bottom: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%);
+    color: white;
+    border: none;
+    padding: 18px 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.table thead th:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.table thead th:last-child:after {
+    display: none;
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e8f5e8;
+}
+
+.table tbody tr:hover {
+    background-color: #f8fff9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 139, 87, 0.1);
+}
+
+.table tbody td {
+    padding: 18px 15px;
+    vertical-align: middle;
+    border: none;
+    position: relative;
+}
+
+/* Record Data Styles */
+.record-id {
+    font-weight: 700;
+    color: #2E8B57;
+    font-size: 0.95rem;
+}
+
+.record-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.record-email {
+    color: #666;
+    font-weight: 500;
+}
+
+.record-phone {
+    color: #666;
+}
+
+.record-date {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    min-height: 40px;
+}
+
+.btn-view {
+    background: linear-gradient(135deg, #17a2b8 0%, #20c997 100%);
+    color: white;
+    min-width: 80px;
+}
+
+.btn-view:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(23, 162, 184, 0.3);
+    color: white;
+}
+
+.btn-create {
+    background: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%);
+    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+}
+
+.btn-create:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(46, 139, 87, 0.3);
+    color: white;
+}
+
+/* Empty State */
+.empty-state {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 5rem;
+    margin-bottom: 25px;
+    opacity: 0.7;
+}
+
+.empty-state h3 {
+    color: #2E8B57;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.empty-state p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%);
+    color: white;
+    padding: 14px 35px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(46, 139, 87, 0.3);
+    color: white;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 20px 60px rgba(46, 139, 87, 0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%);
+    color: white;
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+    padding: 25px 30px;
+}
+
+.modal-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-footer {
+    border-top: 1px solid #e8f5e8;
+    padding: 25px 30px;
+    border-radius: 0 0 20px 20px;
+}
+
+.modal-footer-buttons {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+/* Record Details in Modal */
+.record-details {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-item label {
+    font-weight: 600;
+    color: #2E8B57;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    min-width: 140px;
+}
+
+.detail-item span {
+    color: #333;
+    text-align: right;
+    flex: 1;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Delete Modal Styles */
+.delete-warning {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.warning-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.delete-warning h4 {
+    color: #dc3545;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.delete-warning p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.record-to-delete {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+    border-left: 4px solid #dc3545;
+}
+
+.record-to-delete strong {
+    color: #2E8B57;
+    min-width: 80px;
+    display: inline-block;
+}
+
+.record-to-delete span {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Button Styles in Modal */
+.modal-footer .btn {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    min-width: 100px;
+    flex: 1;
+    max-width: 120px;
+}
+
+.modal-footer .btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.modal-footer .btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+.modal-footer .btn-edit {
+    background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+    color: white;
+}
+
+.modal-footer .btn-edit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+    color: white;
+}
+
+.modal-footer .btn-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+}
+
+.modal-footer .btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .stats-section {
+        justify-content: center;
+    }
+    
+    .modal-footer-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .header-content {
+        padding: 25px 20px;
+    }
+    
+    .count-card {
+        min-width: 180px;
+        padding: 18px 20px;
+    }
+    
+    .records-table-container {
+        padding: 20px;
+        margin: 10px 0;
+    }
+    
+    .table-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .table-responsive {
+        border: none;
+    }
+    
+    .action-buttons {
+        justify-content: center;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+    
+    .detail-item label {
+        min-width: auto;
+    }
+    
+    .detail-item span {
+        text-align: center;
+    }
+    
+    .modal-footer-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .modal-footer .btn {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Delete modal responsive */
+    .delete-warning {
+        padding: 5px 0;
+    }
+    
+    .warning-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+    
+    .record-to-delete {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .header-content {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+    
+    .count-card {
+        min-width: 100%;
+        justify-content: center;
+    }
+    
+    .records-table-container {
+        padding: 15px;
+        border-radius: 15px;
+    }
+    
+    .table thead {
+        display: none;
+    }
+    
+    .table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #e8f5e8;
+        border-radius: 12px;
+        padding: 15px;
+        background: #f8fff9;
+    }
+    
+    .table tbody td {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #e8f5e8;
+    }
+    
+    .table tbody td:before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 600;
+        color: #2E8B57;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .table tbody td:last-child {
+        border-bottom: none;
+        padding-top: 15px;
+    }
+    
+    /* Add data labels for mobile */
+    .record-id:before { content: "ID"; }
+    .record-name:before { content: "Full Name"; }
+    .record-email:before { content: "Email Address"; }
+    .record-phone:before { content: "Phone Number"; }
+    .record-date:before { content: "Created Date"; }
+    .action-buttons:before { content: "Actions"; }
+    
+    .action-buttons {
+        justify-content: center;
+    }
+    
+    .action-buttons:before {
+        display: none;
+    }
+    
+    .empty-state {
+        padding: 60px 15px;
+    }
+    
+    .empty-icon {
+        font-size: 4rem;
+    }
+    
+    .modal-footer-buttons {
+        flex-direction: column;
+    }
+    
+    .modal-footer .btn {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Delete modal mobile */
+    .delete-warning h4 {
+        font-size: 1.2rem;
+    }
+    
+    .record-to-delete {
+        text-align: center;
+    }
+    
+    .record-to-delete strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .main-title {
+        font-size: 1.6rem;
+    }
+    
+    .header-content {
+        padding: 15px 10px;
+    }
+    
+    .count-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .records-table-container {
+        padding: 10px;
+    }
+    
+    .modal-body {
+        padding: 20px 15px;
+    }
+    
+    .modal-header, .modal-footer {
+        padding: 20px 15px;
+    }
+    
+    .warning-icon {
+        font-size: 2.5rem;
+    }
+}
